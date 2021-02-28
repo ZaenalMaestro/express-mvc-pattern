@@ -10,6 +10,12 @@ const methodOverride = require("method-override")
 // setup method-override
 app.use(methodOverride("_method"))
 
+// body parser
+app.use(express.urlencoded({ extended: true }))
+
+// setup JSON here...
+
+
 // setup session
 app.use(flash())
 app.use(session({
